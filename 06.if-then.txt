@@ -1,0 +1,35 @@
+if-then语句：
+------------
+
+    基本使用方法：
+    if [ 测试条件成立 ] 或 命令返回值是否为0
+    then 执行命令
+    fi 结束
+
+    $ if [ $USER = root ]; then echo "hello"; fi
+
+
+    if-then-else语句可以在条件不成立时执行其他指令
+    if [ 测试条件 ]
+    then 执行命令
+    else 执行其他命令
+    fi 结束
+
+    $ if [ $USER = root ]; then echo "hello"; else echo "hi"; fi
+    vim:
+        if [ $USER = root ]
+        then
+            echo "hello"
+        else 
+            echo "hi"
+        fi
+    # ; 可以表示命令连续执行， 可以当作换行看待
+
+        if [ $USER = root ]; then
+            echo "root"
+        elif [ $USER = kevin ]; then
+            echo "kevin"
+        else 
+            echo "other"
+        fi
+
