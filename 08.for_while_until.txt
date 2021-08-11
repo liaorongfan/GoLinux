@@ -1,0 +1,27 @@
+循环 for_while：
+---------------
+    - for语法：
+        for 参数 in 列表
+        do 执行的命令
+        done 结束for循环
+
+    -- vim example:
+        for fliename in `ls *.txt`
+        do mv $filename $(basename $filename .txt).py
+        done
+    
+    - while 语法
+        while test测试成立
+        do
+            命令
+        done
+
+    -- vim example:
+        a=1
+        while [ $a -lt 10 ]
+        do
+            ((a++))
+            echo $a
+        done
+        
+
